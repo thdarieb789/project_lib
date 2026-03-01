@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/project_lib/__init__.py
+src/project_lib/timeseries.py
+src/project_lib.egg-info/PKG-INFO
+src/project_lib.egg-info/SOURCES.txt
+src/project_lib.egg-info/dependency_links.txt
+src/project_lib.egg-info/requires.txt
+src/project_lib.egg-info/top_level.txt
+src/project_lib/detectors/__init__.py
+src/project_lib/detectors/base.py
+src/project_lib/detectors/chauvenet.py
+src/project_lib/detectors/dixon.py
+src/project_lib/detectors/grubbs.py
+src/project_lib/detectors/iqr.py
+src/project_lib/detectors/zscore.py
+test/test_timeseries.py
