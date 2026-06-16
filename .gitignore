@@ -1,0 +1,26 @@
+# Артефакты сборки
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Кэш инструментов
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Окружение IDE/ОС
+.idea/
+.vscode/
+.DS_Store
