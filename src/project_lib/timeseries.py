@@ -24,5 +24,22 @@ class TimeSeries:
             raise ValueError("Временной ряд содержит значения NaN")
 
     def find_anomalies(self, detector):
+        if hasattr(detector, "detector") and hasattr(detector, "series"):
+            self.anomalies = detector.detector.detect(detector.series)
+            return self.anomalies
+
         self.anomalies = detector.detect(self.data)
+        return self.anomalies
+
+    def find_anomalies_auto(self, alpha=0.05, verbose=True):
+        from .analysis import select_detector_result
+
+        selection = select_detector_result(self.data, alpha=alpha)
+        self.anomalies = selection.detector.detect(selection.series)
+        self.selection_result = selection
+        self.selection_report = selection.report(anomalies=self.anomalies)
+
+        if verbose:
+            print(self.selection_report)
+
         return self.anomalies
